@@ -1,0 +1,42 @@
+<div class="container">
+  <h3>Calculator</h3>
+
+  <div class="calculator">
+    <div class="result">
+      <input
+        class="form-control-lg form-control"
+        [ngModel]="calculatorService.mainText"
+        type="text"
+      />
+    </div>
+    <div class="answer">
+      <span class="answerHeading">Answer</span>
+      <span>{{
+        calculatorService.answered ? calculatorService.mainText : ""
+      }}</span>
+    </div>
+
+    <div (click)="calculatorService.pressKey('(')" class="btn operation">(</div>
+    <div (click)="calculatorService.pressKey(')')" class="btn operation">)</div>
+    <div (click)="calculatorService.pressKey('%')" class="btn operation">%</div>
+    <div (click)="calculatorService.clearText()" class="btn operation">AC</div>
+    <div (click)="calculatorService.pressKey('7')" class="btn number">7</div>
+    <div (click)="calculatorService.pressKey('8')" class="btn number">8</div>
+    <div (click)="calculatorService.pressKey('9')" class="btn number">9</div>
+    <div (click)="calculatorService.pressKey('/')" class="btn operation">/</div>
+    <div (click)="calculatorService.pressKey('4')" class="btn number">4</div>
+    <div (click)="calculatorService.pressKey('5')" class="btn number">5</div>
+    <div (click)="calculatorService.pressKey('6')" class="btn number">6</div>
+    <div (click)="calculatorService.pressKey('x')" class="btn operation">x</div>
+    <div (click)="calculatorService.pressKey('1')" class="btn number">1</div>
+    <div (click)="calculatorService.pressKey('2')" class="btn number">2</div>
+    <div (click)="calculatorService.pressKey('3')" class="btn number">3</div>
+    <div (click)="calculatorService.pressKey('+')" class="btn operation">+</div>
+    <div (click)="calculatorService.pressKey('0')" class="btn number">0</div>
+    <div (click)="calculatorService.pressKey('.')" class="btn operation">.</div>
+    <div (click)="calculatorService.getAnswer()" class="btn equal btn-primary">
+      =
+    </div>
+    <div (click)="calculatorService.pressKey('-')" class="btn operation">-</div>
+  </div>
+</div>

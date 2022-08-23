@@ -1,0 +1,33 @@
+.links {
+  padding-right: 5rem;
+  display: flex;
+  gap: 2.5rem;
+}
+.link a:link,
+.main_menu {
+  text-decoration: none;
+  color: white;
+  font-size: 1.15rem;
+}
+.brand {
+  padding-left: 5rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  background-color: rgb(28, 124, 208);
+
+  width: 100%;
+  z-index: 2;
+}
+.btn {
+  background-color: rgb(215, 215, 215) !important;
+}
+a {
+  font-size: 18px;
+}
