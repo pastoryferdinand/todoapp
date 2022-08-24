@@ -13,20 +13,8 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   private firstObsSubscription: Subscription;
   constructor(public calculatorService: CalculatorService) {}
   ngOnDestroy(): void {}
-  operand1: Subscription;
 
   ngOnInit() {
     //output: 0,1,2,3,4,5....
-    var randomNumberGenerator = new Observable(function (observer) {
-      let timer = setInterval(() => console.log('start'), 1000);
-      setTimeout(() => {
-        clearInterval(timer);
-        alert('stop');
-      }, 10000);
-    });
-
-    randomNumberGenerator.subscribe(function (value) {
-      console.log('Value from the Simple Observable: ' + value);
-    });
   }
 }
