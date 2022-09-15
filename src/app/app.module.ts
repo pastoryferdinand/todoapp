@@ -10,6 +10,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { TodoappComponent } from './todoapp/todoapp.component';
 
 import { CalculatorService } from './calculator.service';
+import { TodoFormComponent } from './todoapp/todo-form/todo-form.component';
+import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { CalculatorService } from './calculator.service';
 
     CalculatorComponent,
     TodoappComponent,
+    TodoFormComponent,
+    HomeComponent,
+    ErrorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CalculatorService],

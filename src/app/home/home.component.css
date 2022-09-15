@@ -1,0 +1,25 @@
+.home {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+  padding: 40px;
+}
+img {
+  width: 500px;
+}
+.right {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-weight: 900;
+  font-size: 40px;
+}
+.right {
+  width: 50%;
+}
+.left {
+  width: 50%;
+}
