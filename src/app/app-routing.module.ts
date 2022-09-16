@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
   { path: '', component: HomeComponent },
   { path: 'todoapp', component: TodoappComponent },
+  { path: 'form', component: TodoFormComponent },
   { path: '**', component: ErrorComponent },
 ];
 

@@ -1,1 +1,29 @@
+<div class="container">
+  <h2>Add the task below</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div>
+      <label>
+        Name:
+        <input
+          class="form-control"
+          formControlName="taskName"
+          placeholder="Task name"
+        />
+      </label>
+    </div>
+    <div>
+      <label> Description: </label>
+      <textarea
+        class="form-control"
+        formControlName="description"
+        placeholder="description"
+        name=""
+        id=""
+        cols="15"
+        rows="2"
+      ></textarea>
+    </div>
 
+    <a class="btn1" (click)="onSubmit(myForm)" type="submit"> Add task</a>
+  </form>
+</div>

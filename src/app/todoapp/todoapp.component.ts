@@ -1,6 +1,7 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from '../services/tasks.service';
+import { TaskServiceService } from '../task-service.service';
 import { Tasks } from './todoapp.model';
 
 @Component({
@@ -9,20 +10,19 @@ import { Tasks } from './todoapp.model';
   styleUrls: ['./todoapp.component.css'],
 })
 export class TodoappComponent implements OnInit {
-  tasks: Tasks[];
+  tasks: TaskServiceService[] = [];
 
-  constructor(private apiSvc: TasksService) {}
+  constructor(private getTasks: TaskServiceService) {}
 
   ngOnInit(): void {
-    this.tasks = this.apiSvc.getAllTasks();
+    this.getTasks.fetchTask().subscribe((tasks) => {
+      this.tasks = tasks;
+    });
   }
 
-  deleteTask(item: Tasks) {
-    const index = this.tasks.indexOf(item);
-    if (index != -1) {
-      [...this.tasks, this.tasks.splice(index, 1)];
-    }
-  }
-
-  addTask() {}
+  // deleteTask(item: Tasks) {
+  //   const index = this.tasks.indexOf(item);
+  //   if (index != -1) {
+  //     [...this.tasks, this.tasks.splice(index, 1)];
+  //   }
 }

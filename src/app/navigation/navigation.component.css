@@ -20,13 +20,14 @@
   align-items: center;
 
   position: fixed;
-  background-color: rgb(28, 124, 208);
+  background-color: rgb(96, 4, 73);
 
   width: 100%;
   z-index: 2;
 }
 .btn {
   background-color: rgb(215, 215, 215) !important;
+  height: 100%;
 }
 a {
   font-size: 18px;

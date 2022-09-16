@@ -13,6 +13,9 @@ import { CalculatorService } from './calculator.service';
 import { TodoFormComponent } from './todoapp/todo-form/todo-form.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TaskServiceService } from './task-service.service';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,14 @@ import { ErrorComponent } from './error/error.component';
     HomeComponent,
     ErrorComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [CalculatorService],
+  imports: [
+    ReactiveFormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+  ],
+  providers: [CalculatorService, TaskServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
